@@ -1,3 +1,4 @@
+// anime entity
 export class UserTypeOrm {
   constructor(
     readonly id: string,

@@ -1,5 +1,6 @@
 import { pbkdf2Sync, randomBytes } from 'node:crypto';
 
+// value object
 export class Password {
   static ITERATIONS = 100;
   static KEY_LENGTH = 64;

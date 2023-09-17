@@ -2,6 +2,7 @@ import { randomUUID, UUID } from 'crypto';
 import { Email } from "./email";
 import { Password } from "./password";
 
+// Aggregate Root
 export class User {
   public id: UUID = randomUUID()
 
