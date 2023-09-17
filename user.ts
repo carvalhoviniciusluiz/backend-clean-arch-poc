@@ -1,7 +1,10 @@
+import { randomUUID } from 'crypto';
 import { Email } from "./email";
 import { Password } from "./password";
 
 export class User {
+  public id = randomUUID()
+
   private constructor(
     readonly email: Email,
     readonly password: Password
