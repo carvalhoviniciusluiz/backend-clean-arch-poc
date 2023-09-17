@@ -1,6 +1,8 @@
 import { faker } from '@faker-js/faker';
-import { CreateUserRepository, FindOneUserByEmailRepository, SignUpUseCase, UserFoundError } from "./signup-usecase";
-import { User } from "./user";
+import { User } from '../../domain/entity';
+import type { CreateUserRepository, FindOneUserByEmailRepository } from '../repository';
+import { EmailFoundError } from '../../domain/error';
+import { SignUpUseCase } from './signup-usecase';
 
 const UserInMemoryRepository = class implements CreateUserRepository, FindOneUserByEmailRepository {
   users: User[] = [];
@@ -40,7 +42,7 @@ describe('SignUpUseCase', () => {
     await signUp.execute(input);
     const promise = signUp.execute(input);
     await expect(promise).rejects.toThrowError(
-      new UserFoundError('E-mail already registered')
+      new EmailFoundError('E-mail already registered')
     );
   });
   test('Deve retornar um erro caso a transação falhe', async () => {

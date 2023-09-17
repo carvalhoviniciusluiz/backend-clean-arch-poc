@@ -1,6 +1,4 @@
 import { Email, InvalidEmailError } from "./email";
-
-
 describe('email', () => {
   test('Deve ser um email inválido', () => {
     expect(() => new Email('test@')).toThrowError(

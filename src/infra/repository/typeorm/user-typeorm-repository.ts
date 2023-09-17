@@ -1,13 +1,10 @@
 import { Repository } from 'typeorm';
-import { CreateUserRepository, FindOneUserByEmailRepository } from './signup-usecase';
-import { UserTypeOrm } from './user.typeorm';
-import { User } from './user';
-import { Email } from './email';
+import type { CreateUserRepository, FindOneUserByEmailRepository, UserRepository } from '../../../application/repository';
+import { UserTypeOrm } from '../../database/typeorm/entity';
+import { User } from '../../../domain/entity';
+import { Email } from '../../../domain/valu-object';
 
-export class UserTypeOrmRepository
-  implements
-    CreateUserRepository,
-    FindOneUserByEmailRepository
+export class UserTypeOrmRepository implements UserRepository
 {
   constructor(private readonly userRepository: Repository<UserTypeOrm>) {}
 

@@ -1,5 +1,5 @@
 import { EntitySchema } from 'typeorm';
-import { UserTypeOrm } from './user.typeorm';
+import { UserTypeOrm } from '../entity';
 
 export const UserSchema = new EntitySchema<UserTypeOrm>({
   name: UserTypeOrm.name,

@@ -1,5 +1,4 @@
 import { Password } from "./password";
-
 describe('password', () => {
   const SALT = 'salt';
   const PASSWORD = '1234';

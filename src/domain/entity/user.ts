@@ -1,6 +1,5 @@
 import { randomUUID, UUID } from 'crypto';
-import { Email } from "./email";
-import { Password } from "./password";
+import { Email, Password } from "../valu-object";
 
 // Aggregate Root
 export class User {
