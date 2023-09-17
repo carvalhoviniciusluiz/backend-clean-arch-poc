@@ -1,9 +1,9 @@
-import { randomUUID, UUID } from 'crypto';
+import { randomUUID } from 'crypto';
 import { Email, Password } from "../valu-object";
 
 // Aggregate Root
 export class User {
-  public id: UUID = randomUUID()
+  public id = randomUUID()
 
   private constructor(
     readonly email: Email,
