@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "dev": "ts-node -r tsconfig-paths/register src/main/main.ts",
+    "dev": "ts-node -r tsconfig-paths/register src/main/express/service.ts",
     "test": "jest"
   },
   "keywords": [],
