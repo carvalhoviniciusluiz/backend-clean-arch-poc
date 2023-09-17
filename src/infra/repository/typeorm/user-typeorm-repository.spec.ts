@@ -1,10 +1,10 @@
 import { UUID } from 'crypto';
 import { faker } from '@faker-js/faker';
 import { DataSource, Repository } from 'typeorm';
-import { UserTypeOrm } from '../../database/typeorm/entity';
-import { UserSchema } from '../../database/typeorm/schema';
-import { User } from '../../../domain/entity';
+import { UserTypeOrm } from '~/infra/database/typeorm/entity';
 import { UserTypeOrmRepository } from './user-typeorm-repository';
+import { UserSchema } from '~/infra/database/typeorm/schema';
+import { User } from '~/domain/entity';
 describe('UserTypeOrmRepository', () => {
   let dataSource: DataSource;
   let userRepository: Repository<UserTypeOrm>;

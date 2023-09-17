@@ -1,7 +1,7 @@
 import { DataSource } from 'typeorm';
-import type { RepositoryFactory, UserRepository } from '../../application/repository';
-import { UserTypeOrmRepository } from '../repository/typeorm';
+import type { RepositoryFactory, UserRepository } from '~/application/repository';
 import { UserTypeOrm } from '../database/typeorm/entity';
+import { UserTypeOrmRepository } from '../repository/typeorm';
 
 // Abstract Factory
 export class RepositoryImplFactory implements RepositoryFactory {

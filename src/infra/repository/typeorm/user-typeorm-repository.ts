@@ -1,8 +1,8 @@
 import { Repository } from 'typeorm';
-import type { CreateUserRepository, FindOneUserByEmailRepository, UserRepository } from '../../../application/repository';
-import { UserTypeOrm } from '../../database/typeorm/entity';
-import { User } from '../../../domain/entity';
-import { Email } from '../../../domain/valu-object';
+import type { CreateUserRepository, FindOneUserByEmailRepository, UserRepository } from '~/application/repository';
+import { User } from '~/domain/entity';
+import { Email } from '~/domain/valu-object';
+import { UserTypeOrm } from '~/infra/database/typeorm/entity';
 
 export class UserTypeOrmRepository implements UserRepository
 {

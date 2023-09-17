@@ -1,4 +1,4 @@
-import type { UsecaseFactory } from "../../domain/usecase";
+import type { UsecaseFactory } from "~/domain/usecase";
 import type { RepositoryFactory } from "../repository";
 import { SignUpUseCase } from "../usecase";
 

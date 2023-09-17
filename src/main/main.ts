@@ -1,8 +1,7 @@
-import { UsecaseImplFactory } from "../application/factory";
-import { sqliteDataSource } from "../infra/database/datasource";
-import { RepositoryImplFactory } from "../infra/factory";
-import { ExpressAdapter } from "../infra/http/express-adapter";
-import { MainController } from "../infra/http/main-controller";
+import { UsecaseImplFactory } from "~/application/factory";
+import { sqliteDataSource } from "~/infra/database/datasource";
+import { RepositoryImplFactory } from "~/infra/factory";
+import { ExpressAdapter, MainController } from "~/infra/http";
 
 // main composition root
 async function main () {

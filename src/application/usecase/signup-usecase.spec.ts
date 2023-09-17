@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
-import { User } from '../../domain/entity';
-import type { CreateUserRepository, FindOneUserByEmailRepository } from '../repository';
-import { EmailFoundError } from '../../domain/error';
+import { CreateUserRepository, FindOneUserByEmailRepository } from '../repository';
+import { User } from '~/domain/entity';
+import { EmailFoundError } from '~/domain/error';
 import { SignUpUseCase } from './signup-usecase';
 
 const UserInMemoryRepository = class implements CreateUserRepository, FindOneUserByEmailRepository {

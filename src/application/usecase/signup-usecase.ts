@@ -1,7 +1,7 @@
-import { User } from "../../domain/entity";
-import { EmailFoundError } from "../../domain/error";
-import type { SignUp } from "../../domain/usecase";
+import { SignUp } from "~/domain/usecase";
 import type { CreateUserRepository, FindOneUserByEmailRepository } from "../repository";
+import { User } from "~/domain/entity";
+import { EmailFoundError } from "~/domain/error";
 
 type SignUpRepository = CreateUserRepository &
   FindOneUserByEmailRepository;

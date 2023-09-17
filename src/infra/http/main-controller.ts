@@ -1,5 +1,6 @@
-import { UsecaseFactory } from "../../domain/usecase";
+import { UsecaseFactory } from "~/domain/usecase";
 import { HttpServer } from "./express-adapter";
+
 
 // Interface Adapter
 export class MainController {

@@ -1,4 +1,4 @@
-import { User } from "../../domain/entity/user";
+import { User } from "~/domain/entity";
 
 export interface CreateUserRepository {
   insert(
