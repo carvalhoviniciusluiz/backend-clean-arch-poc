@@ -2,7 +2,6 @@ import { faker } from '@faker-js/faker';
 import { DataSource } from 'typeorm';
 import { UserTypeOrm } from './user.typeorm';
 import { UserSchema } from './user.schema';
-
 describe('UserSchema', () => {
   let dataSource: DataSource;
   let user: UserTypeOrm;
