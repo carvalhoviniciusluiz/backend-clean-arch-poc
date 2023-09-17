@@ -1,14 +1,11 @@
 import { SignUp } from "~/domain/usecase";
-import type { CreateUserRepository, FindOneUserByEmailRepository } from "../repository";
 import { User } from "~/domain/entity";
 import { EmailFoundError } from "~/domain/error";
-
-type SignUpRepository = CreateUserRepository &
-  FindOneUserByEmailRepository;
+import type { UserRepository } from "../repository";
 
 export class SignUpUseCase implements SignUp {
   constructor(
-    readonly repository: SignUpRepository
+    readonly repository: UserRepository
   ) {}
 
   async execute(input: SignUp.Input): Promise<SignUp.Output> {
