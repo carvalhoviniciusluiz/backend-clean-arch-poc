@@ -1,5 +1,5 @@
 import { UsecaseFactory } from "~/domain/usecase";
-import { HttpServer } from "./express-adapter";
+import { HttpServer } from "./http-server.interface";
 
 
 // Interface Adapter

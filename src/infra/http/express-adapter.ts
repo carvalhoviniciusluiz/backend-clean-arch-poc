@@ -1,9 +1,5 @@
 import express, { Request, Response } from "express";
-
-export interface HttpServer {
-  on (method: string, url: string, callback: Function): void;
-  listen (port: number): void;
-}
+import { HttpServer } from "./http-server.interface";
 
 export class ExpressAdapter implements HttpServer {
   app: any;

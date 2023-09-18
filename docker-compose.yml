@@ -1,0 +1,14 @@
+version: '3.8'
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    expose:
+      - 27017
+    ports:
+      - 27017:27017
