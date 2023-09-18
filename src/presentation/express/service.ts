@@ -1,5 +1,5 @@
 import { UsecaseImplFactory } from "~/application/factory";
-import { sqliteDataSource } from "~/infra/database/datasource";
+import { sqliteDataSource } from "~/infra/database/typeorm/datasource";
 import { RepositoryImplFactory } from "~/infra/factory";
 import { ExpressAdapter, MainController } from "~/infra/http";
 

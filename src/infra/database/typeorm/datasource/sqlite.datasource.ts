@@ -1,6 +1,6 @@
 import path from "path";
 import { DataSource } from "typeorm";
-import { UserSchema } from "../typeorm/schema";
+import { UserSchema } from "../schema";
 
 export const sqliteDataSource = () => {
   const dataSource = new DataSource({
