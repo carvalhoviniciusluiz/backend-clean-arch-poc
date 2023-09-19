@@ -5,6 +5,11 @@ networks:
     driver: bridge
 
 services:
+  redis:
+    image: redis:7.0.8-alpine
+    ports:
+    - 6379:6379
+
   mongo:
     image: mongo
     restart: always
@@ -12,3 +17,17 @@ services:
       - 27017
     ports:
       - 27017:27017
+
+  postgres:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    networks:
+      - app-network
+    volumes:
+      - ./.cache/pgdata:/var/lib/postgresql
